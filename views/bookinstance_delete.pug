@@ -1,0 +1,13 @@
+extends layout 
+
+block content 
+  h1(style="font-size: 1.4rem; margin-top: 20px;") Delete instance: #{bookInstance.book.title}
+
+  p Do you really want to delete this Book instance(copy)?
+
+    form(method="POST") 
+      div.form-group 
+        input#genre_id.form-control(type='hidden', name='bookInstance_id', value=bookInstance._id)
+      button.btn.btn-primary#deleteBtn(type='submit') Delete             
+
+  
